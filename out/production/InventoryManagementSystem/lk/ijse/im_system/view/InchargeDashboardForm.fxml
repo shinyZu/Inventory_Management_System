@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="contextDashboard" stylesheets="@assets/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.im_system.controller.InchargeDashboardFormController">
+   <children>
+      <BorderPane prefHeight="680.0" prefWidth="1050.0">
+         <top>
+            <BorderPane prefHeight="40.0" prefWidth="1525.0">
+               <right>
+                  <HBox prefWidth="943.0" style="-fx-background-color: #2c3e50;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="lblTime" alignment="CENTER" prefHeight="26.0" prefWidth="138.0" text="11:42:56" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="628.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblDate" alignment="CENTER" prefHeight="26.0" prefWidth="172.0" text="2021.09.03" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="5.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblDay" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="150.0" text="Wednesday" textFill="WHITE">
+                           <padding>
+                              <Insets right="3.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <MaterialDesignIconView id="btnLogout" fill="WHITE" glyphName="POWER" onMouseClicked="#logoutOnAction" pickOnBounds="true" size="25" wrappingWidth="29.0" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets right="15.0" top="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MaterialDesignIconView>
+                     </children>
+                  </HBox>
+               </right>
+               <left>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Group>
+                           <children>
+                              <Circle fill="WHITE" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Label layoutX="-8.0" layoutY="-12.0" prefHeight="16.0" prefWidth="10.0" text="E" textFill="#22577a">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="-1.0" layoutY="-4.0" text="Z" textFill="#22577a">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" top="8.0" />
+                           </HBox.margin>
+                        </Group>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="77.0" text="Inventory" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </top>
+         <left>
+            <VBox alignment="BASELINE_LEFT" prefHeight="663.0" prefWidth="164.0" style="-fx-background-color: #2c3e50;" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <JFXButton fx:id="btnDashboard" alignment="CENTER" contentDisplay="TOP" onAction="#showDashboardOnAction" prefHeight="46.0" prefWidth="200.0" text="Dashboard" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="15.0" top="17.0" />
+                     </padding>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="VIEW_DASHBOARD" size="50" styleClass="glyph-icon" />
+                     </graphic>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCategories" alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="41.0" onAction="#showCategoryOnAction" prefHeight="46.0" prefWidth="200.0" text="Categories" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" top="17.0" />
+                     </padding>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="SORT" size="50" styleClass="glyph-icon" />
+                     </graphic>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnInventory" alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="23.0" onAction="#showInventoryOnAction" prefHeight="46.0" prefWidth="200.0" text="Inventory" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" top="17.0" />
+                     </padding>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CUBE_OUTLINE" size="50" styleClass="glyph-icon" />
+                     </graphic>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="56.0" onAction="#showOrdersOnAction" prefHeight="46.0" prefWidth="200.0" text="Orders" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" top="17.0" />
+                     </padding>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="RENAME_BOX" size="50" styleClass="glyph-icon" />
+                     </graphic>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="36.0" onAction="#showCondemnsOnAction" prefHeight="46.0" prefWidth="200.0" text="Condemnations" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="15.0" top="17.0" />
+                     </padding>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="RECYCLE" size="50" styleClass="glyph-icon" />
+                     </graphic>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane fx:id="dashBorderPane" prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <AnchorPane prefHeight="44.0" prefWidth="886.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <MaterialDesignIconView fill="#9e9e9e" glyphName="BELL_OUTLINE" layoutX="653.0" layoutY="33.0" onMouseClicked="#showNotificationsOnClick" pickOnBounds="true" size="30" AnchorPane.rightAnchor="185.0" AnchorPane.topAnchor="6.75">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MaterialDesignIconView>
+                              <MaterialDesignIconView fill="#9e9e9e" glyphName="EMAIL_OUTLINE" layoutX="710.0" layoutY="31.0" onMouseClicked="#showInboxMsgsOnClick" pickOnBounds="true" size="30" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="6.75">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MaterialDesignIconView>
+                              <MaterialDesignIconView fill="#9e9e9e" glyphName="ACCOUNT" layoutX="826.0" layoutY="33.0" pickOnBounds="true" size="30" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="6.75">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MaterialDesignIconView>
+                              <Label fx:id="lblHeader" layoutX="50.0" layoutY="7.0" text="Dashboard" textFill="#999999" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="8.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <MaterialDesignIconView fill="#9e9e9e" glyphName="SETTINGS" layoutX="768.0" layoutY="33.0" pickOnBounds="true" size="30" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="6.75">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MaterialDesignIconView>
+                              <MaterialDesignIconView id="iconPointer" fill="#999999" glyphName="HAND_POINTING_RIGHT" layoutX="20.0" layoutY="32.25" size="30" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="6.0" />
+                              <Label fx:id="lblNotification" alignment="CENTER" layoutX="687.0" layoutY="7.0" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: red; -fx-background-radius: 100;" text="1" textFill="WHITE" AnchorPane.rightAnchor="184.0">
+                                 <font>
+                                    <Font name="System Bold" size="9.0" />
+                                 </font></Label>
+                              <Label fx:id="lblMailBox" alignment="CENTER" layoutX="750.0" layoutY="8.0" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: red; -fx-background-radius: 100;" text="10" textFill="WHITE" AnchorPane.rightAnchor="121.0">
+                                 <font>
+                                    <Font name="System Bold" size="9.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <center>
+                        <AnchorPane fx:id="contextCommonPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <GridPane prefHeight="402.0" prefWidth="853.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#364e68" height="75.0" stroke="#364e68" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="NEEDLE" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblSurgicalItems" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefHeight="26.0" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="99.5" layoutY="42.0" text="Surgical Items" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group GridPane.columnIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#2470a0" height="75.0" stroke="#2470a0" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="SORT" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblCategory" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.5" layoutY="42.0" text="Categories" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group GridPane.columnIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4592af" height="75.0" stroke="#4592af" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="CLIPBOARD_TEXT" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblOrders" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="149.5" layoutY="42.0" text="Orders" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group GridPane.columnIndex="3">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#7f8fa6" height="76.0" stroke="#7f8fa6" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="ALERT" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblRestock" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="141.5" layoutY="42.0" text="Restock" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group layoutX="26.0" layoutY="17.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#364e68" height="75.0" stroke="#364e68" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="SOFA" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblWoodenFurniture" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="77.0" layoutY="42.0" text="Wooden Furniture" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" top="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group layoutX="271.0" layoutY="17.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#2470a0" height="75.0" stroke="#2470a0" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="CUBE_SEND" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblInventory" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="96.5" layoutY="42.0" text="Total Inventory" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" top="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group layoutX="516.0" layoutY="17.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4592af" height="75.0" stroke="#4592af" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="RECYCLE" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblCondemnations" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="92.5" layoutY="42.0" text="Condemnations" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" top="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group layoutX="26.0" layoutY="72.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#364e68" height="75.0" stroke="#364e68" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="FRIDGE" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblMetalFurniture" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="94.0" layoutY="42.0" text="Metal Furniture" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" top="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group layoutX="26.0" layoutY="196.0" GridPane.rowIndex="3">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#364e68" height="75.0" stroke="#364e68" strokeLineJoin="ROUND" width="210.0" />
+                                          <Label fx:id="lblLinen" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="156.0" layoutY="42.0" text="Linen" textFill="WHITE" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="FILTER_VARIANT" layoutX="14.0" layoutY="56.0" rotate="180.0" size="50" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" top="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                    <Group layoutX="271.0" layoutY="122.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#2470a0" height="75.0" stroke="#2470a0" strokeLineJoin="ROUND" width="210.0" />
+                                          <MaterialDesignIconView id="dbIcons" fill="WHITE" glyphName="MAP_MARKER" layoutX="16.0" layoutY="56.0" size="50" />
+                                          <Label fx:id="lblLocation" alignment="CENTER_RIGHT" layoutX="112.5" layoutY="17.5" prefWidth="80.0" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="130.5" layoutY="42.0" text="Locations" textFill="WHITE" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="15.0" top="15.0" />
+                                       </GridPane.margin>
+                                    </Group>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </StackPane>
+         </center>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </BorderPane>
+   </children>
+</StackPane>

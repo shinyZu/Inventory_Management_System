@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" prefHeight="680.0" prefWidth="1050.0" stylesheets="@assets/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.im_system.controller.MainFormController">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="680.0" prefWidth="1050.0">
+         <children>
+            <ImageView fitHeight="680.0" fitWidth="1050.0" layoutX="450.0" layoutY="272.0" opacity="0.88" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@assets/images/mainPageIMG2.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="525.0" layoutY="26.0" prefHeight="619.0" prefWidth="458.0" style="-fx-background-color: rgb(255,255,255,0.5); -fx-background-radius: 20; -fx-border-color: #22577A; -fx-border-radius: 20; -fx-border-width: 3;" styleClass="loginContainer" stylesheets="@assets/styles/styles.css" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="26.0">
+               <children>
+                  <JFXButton id="btnRole" fx:id="btnIncharge" buttonType="RAISED" layoutX="52.0" layoutY="117.0" onAction="#goToInchargeLoginFormOnAction" prefHeight="41.0" prefWidth="174.0" style="-fx-background-color: #22577A; -fx-background-radius: 10 0 0 10;" text="Ward In-charge" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton id="btnRole" fx:id="btnStorekeeper" buttonType="RAISED" layoutX="226.0" layoutY="117.0" onAction="#goToStorekeeperLoginFormOnAction" prefHeight="41.0" prefWidth="174.0" style="-fx-background-color: #999; -fx-background-radius: 0 10 10 0;" text="Storekeeper" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="28.0" prefHeight="49.0" prefWidth="341.0" text="Welcome to        Inventory" textFill="#22577a">
+                     <font>
+                        <Font name="Ubuntu Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="63.0" layoutY="72.0" prefHeight="16.0" prefWidth="245.0" text="Inventory Management System" textFill="#22577a" />
+                  <Group layoutX="241.0" layoutY="48.0">
+                     <children>
+                        <Circle fill="#e1e0e0" radius="19.0" stroke="#22577a" strokeType="INSIDE" strokeWidth="2.0" />
+                        <Label layoutX="-12.0" layoutY="-17.0" prefHeight="16.0" prefWidth="10.0" text="E" textFill="#22577a">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="-1.0" layoutY="-4.0" text="Z" textFill="#22577a">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <JFXTextField fx:id="txtUsername" focusColor="#22577a" labelFloat="true" layoutX="54.0" layoutY="241.0" onKeyReleased="#validateFieldOnKeyRelease" prefHeight="26.0" prefWidth="341.0" promptText="Username">
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtPassword" focusColor="#22577a" labelFloat="true" layoutX="54.0" layoutY="301.0" onKeyReleased="#validateFieldOnKeyRelease" prefHeight="26.0" prefWidth="341.0" promptText="Password" visible="false" />
+                  <MaterialDesignIconView id="img" fill="#22577a" glyphName="ACCOUNT_CIRCLE" layoutX="197.0" layoutY="233.0" size="60" styleClass="img" />
+                  <JFXPasswordField fx:id="fieldPassword" focusColor="#22577a" labelFloat="true" layoutX="54.0" layoutY="301.0" onKeyReleased="#validateFieldOnKeyRelease" prefHeight="26.0" prefWidth="341.0" promptText="Password" />
+                  <MaterialDesignIconView fx:id="iconHidePassword" glyphName="LOCK_OPEN" layoutX="365.0" layoutY="321.0" onMouseClicked="#hidePasswordOnAction" pickOnBounds="true" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MaterialDesignIconView>
+                  <MaterialDesignIconView fx:id="iconShowPassword" glyphName="LOCK" layoutX="365.0" layoutY="321.0" onMouseClicked="#showPasswordOnAction" pickOnBounds="true" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MaterialDesignIconView>
+                  <MaterialDesignIconView glyphName="ACCOUNT" layoutX="364.0" layoutY="259.0" size="20" />
+                  <Label fx:id="lblRegistered" layoutX="125.0" layoutY="589.0" text="Already Registered?" />
+                  <Label fx:id="lblLogin" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="257.0" layoutY="588.0" onMouseClicked="#displayLoginBtnOnAction" text="Login" textFill="#22577a" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="lblNewUser" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="589.0" prefHeight="16.0" prefWidth="131.0" text="New User?" />
+                  <Label fx:id="lblSignUp" layoutX="238.0" layoutY="588.0" onMouseClicked="#displaySignUpBtnOnAction" prefHeight="16.0" prefWidth="60.0" text="SignUp" textFill="#22577a" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <JFXTextField fx:id="txtEmail" focusColor="#22577a" labelFloat="true" layoutX="54.0" layoutY="359.0" onKeyReleased="#validateFieldOnKeyRelease" prefHeight="26.0" prefWidth="341.0" promptText="Email">
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtEmailPassword" focusColor="#22577a" labelFloat="true" layoutX="55.0" layoutY="421.0" prefHeight="26.0" prefWidth="341.0" promptText="Password" visible="false" />
+                  <JFXPasswordField fx:id="fieldEmailPassword" focusColor="#22577a" labelFloat="true" layoutX="55.0" layoutY="421.0" onKeyReleased="#validateFieldOnKeyRelease" prefHeight="26.0" prefWidth="341.0" promptText="Password" />
+                  <MaterialDesignIconView fx:id="iconHidePassword1" glyphName="LOCK_OPEN" layoutX="366.0" layoutY="441.0" onMouseClicked="#hideEmailPasswordOnAction" pickOnBounds="true" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MaterialDesignIconView>
+                  <MaterialDesignIconView fx:id="iconShowPassword1" glyphName="LOCK" layoutX="366.0" layoutY="441.0" onMouseClicked="#showEmailPasswordOnAction" pickOnBounds="true" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MaterialDesignIconView>
+                  <Label fx:id="lblEmailPasswordError" layoutX="55.0" layoutY="446.0" prefHeight="25.0" prefWidth="341.0" text="Use 8 or more characters with a mix of letters, numbers &amp; symbols" textFill="#575757">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <JFXComboBox fx:id="cmbWard" layoutX="66.0" layoutY="489.0" prefHeight="26.0" prefWidth="140.0" promptText="Ward" styleClass="jfx-combo-box" AnchorPane.leftAnchor="53.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+                  <MaterialDesignIconView fx:id="iconMail" glyphName="EMAIL" layoutX="365.0" layoutY="379.0" size="20" />
+                  <Label fx:id="lblUsernameError" layoutX="55.0" layoutY="267.0" prefHeight="25.0" prefWidth="341.0" text="You can use letters, numbers &amp; periods" textFill="#515151">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <Label fx:id="lblPasswordError" layoutX="54.0" layoutY="327.0" prefHeight="25.0" prefWidth="341.0" text="Use 8 or more characters with a mix of letters, numbers &amp; symbols" textFill="#5b5a5a">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <Label fx:id="lblEmailError" layoutX="54.0" layoutY="385.0" prefHeight="25.0" prefWidth="341.0" text="You can use letters, numbers &amp; periods" textFill="#4a4949">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <JFXComboBox fx:id="cmbInchargeId" layoutX="253.0" layoutY="489.0" prefHeight="26.0" prefWidth="140.0" promptText="In-charge ID" styleClass="jfx-combo-box" AnchorPane.rightAnchor="65.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+                  <JFXButton id="btnSignUp" fx:id="btnSignUp" buttonType="RAISED" layoutX="48.0" layoutY="538.0" onAction="#signUpOnAction" prefHeight="41.0" prefWidth="349.0" style="-fx-background-color: #22577A; -fx-background-radius: 10;" text="SignUp" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton id="btnLogin" fx:id="btnLogin" buttonType="RAISED" layoutX="48.0" layoutY="538.0" onAction="#loginOnAction" prefHeight="41.0" prefWidth="349.0" style="-fx-background-color: #22577A; -fx-background-radius: 10;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

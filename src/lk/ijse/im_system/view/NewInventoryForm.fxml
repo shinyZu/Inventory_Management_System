@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextNewInventory" prefHeight="487.0" prefWidth="319.0" stylesheets="@assets/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.im_system.controller.NewInventoryFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="41.0" prefHeight="435.0" prefWidth="304.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 10;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="41.0">
+         <children>
+            <TextField fx:id="txtInvNo" disable="true" editable="false" layoutX="23.0" layoutY="41.0" prefHeight="28.0" prefWidth="259.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" />
+            <Label layoutX="23.0" layoutY="14.0" prefHeight="31.0" prefWidth="150.0" text="Inventory No :" textFill="#757575" />
+            <Label layoutX="24.0" layoutY="225.0" prefHeight="31.0" prefWidth="150.0" text="Location :" />
+            <JFXButton id="btnAdd" fx:id="btnSave" buttonType="RAISED" layoutX="173.0" layoutY="381.0" onAction="#saveInventoryOnAction" prefHeight="40.0" prefWidth="108.0" style="-fx-background-color: #e67e22; -fx-background-radius: 10;" text="Save" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="CHECKBOX_MARKED_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton id="btnAdd" fx:id="btnCancel" buttonType="RAISED" layoutX="23.0" layoutY="381.0" onAction="#cancelOnAction" prefHeight="40.0" prefWidth="108.0" style="-fx-background-color: #999; -fx-background-radius: 10;" text="Cancel" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="CLOSE_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TextField fx:id="txtDescription" layoutX="23.0" layoutY="108.0" prefHeight="28.0" prefWidth="259.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" />
+            <Label layoutX="23.0" layoutY="82.0" prefHeight="31.0" prefWidth="150.0" text="Description :" />
+            <Label layoutX="23.0" layoutY="156.0" prefHeight="31.0" prefWidth="122.0" text="Quantity :" />
+            <Spinner fx:id="spinnerQTY" editable="true" layoutX="23.0" layoutY="182.0" prefHeight="28.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-background-radius: 10;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Spinner>
+            <Label layoutX="24.0" layoutY="297.0" prefHeight="31.0" prefWidth="150.0" text="Category :" />
+            <ComboBox fx:id="cmbLocation" layoutX="24.0" layoutY="249.0" prefHeight="28.0" prefWidth="259.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ComboBox fx:id="cmbCategory" layoutX="23.0" layoutY="323.0" prefHeight="28.0" prefWidth="259.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Spinner fx:id="spinnerQTY2" editable="true" layoutX="166.0" layoutY="182.0" prefHeight="28.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" AnchorPane.rightAnchor="22.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Spinner>
+            <Label layoutX="160.0" layoutY="156.0" prefHeight="31.0" prefWidth="130.0" text="Notify if below :" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="8.0" layoutY="10.0" prefHeight="29.0" prefWidth="122.0" text="New Inventory">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="129.0" layoutY="23.0" prefHeight="4.0" prefWidth="175.0" />
+   </children>
+</AnchorPane>

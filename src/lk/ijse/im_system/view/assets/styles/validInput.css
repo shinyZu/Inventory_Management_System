@@ -1,0 +1,27 @@
+.jfx-text-field > .input-focused-line {
+    -fx-background-color:green;
+}
+
+.jfx-text-field > .input-line {
+    -fx-background-color:green;
+}
+
+
+.jfx-text-field{
+    -fx-prompt-text-fill: green;
+
+}
+
+/*----------------------------------------------Password Filed----------------------------------------------------*/
+
+.jfx-password-field > .input-focused-line {
+    -fx-background-color:green;
+}
+
+.jfx-password-field > .input-line {
+    -fx-background-color:green;
+}
+
+.jfx-password-field {
+    -fx-prompt-text-fill: green;
+}

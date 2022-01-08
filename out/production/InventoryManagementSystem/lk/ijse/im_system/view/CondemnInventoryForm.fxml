@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextCondemn" prefHeight="600.0" prefWidth="886.0" stylesheets="@assets/styles/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.im_system.controller.CondemnInventoryFormController">
+   <children>
+      <ScrollPane fitToWidth="true" layoutX="325.0" layoutY="108.0" prefHeight="775.0" prefWidth="886.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="776.0" prefWidth="868.0">
+               <children>
+                  <BorderPane layoutX="333.0" layoutY="57.0" prefHeight="675.0" prefWidth="868.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <BorderPane prefHeight="440.0" prefWidth="866.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <BorderPane prefHeight="154.0" prefWidth="856.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </BorderPane.margin>
+                                 <top>
+                                    <AnchorPane prefHeight="182.0" prefWidth="858.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="635.0" layoutY="15.0" text="Condemn ID :" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="15.0">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblCondemnId" layoutX="763.0" layoutY="14.0" text="CDM-0000" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Ward :" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblWard" layoutX="77.0" layoutY="14.0" prefHeight="19.0" prefWidth="335.0" text="WD-000" AnchorPane.leftAnchor="77.0" AnchorPane.topAnchor="15.0">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane hgap="15.0" layoutX="8.0" layoutY="47.0" prefHeight="88.0" prefWidth="841.0" vgap="10.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="50.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <ComboBox fx:id="cmbInventoryNo" prefHeight="28.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ComboBox>
+                                                <Label prefHeight="31.0" prefWidth="150.0" text="Caregory :" GridPane.columnIndex="1" />
+                                                <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="150.0" text="Inventory No :" GridPane.columnIndex="2" />
+                                                <Label layoutX="173.0" layoutY="10.0" prefHeight="31.0" prefWidth="150.0" text="Description :" GridPane.columnIndex="3" />
+                                                <Label layoutX="336.0" layoutY="10.0" prefHeight="31.0" prefWidth="150.0" text="QTY With Ward :" GridPane.rowIndex="2">
+                                                   <padding>
+                                                      <Insets top="42.0" />
+                                                   </padding></Label>
+                                                <ComboBox fx:id="cmbDescription" prefHeight="28.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ComboBox>
+                                                <Label layoutX="10.0" layoutY="66.0" prefHeight="31.0" prefWidth="150.0" text="QTY To Condemn :" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <padding>
+                                                      <Insets top="42.0" />
+                                                   </padding></Label>
+                                                <ComboBox fx:id="cmbCategory" layoutX="296.0" layoutY="29.0" prefHeight="28.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ComboBox>
+                                                <Label layoutX="225.0" layoutY="10.0" prefHeight="31.0" prefWidth="150.0" text="Ward :" />
+                                                <ComboBox fx:id="cmbWardNo" layoutX="225.0" layoutY="40.0" prefHeight="28.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ComboBox>
+                                                <Spinner fx:id="spinnerCondemnQTY" editable="true" prefHeight="28.0" prefWidth="125.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <padding>
+                                                      <Insets top="50.0" />
+                                                   </padding>
+                                                </Spinner>
+                                             </children>
+                                          </GridPane>
+                                          <JFXButton id="btnAdd" buttonType="RAISED" layoutX="654.0" layoutY="125.0" onAction="#addToListOnAction" prefHeight="40.0" prefWidth="192.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;" text="Add To List" textFill="WHITE" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="10.0">
+                                             <graphic>
+                                                <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="PLUS_CIRCLE" size="20" />
+                                             </graphic>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </JFXButton>
+                                          <TextField fx:id="txtQtyWithWard" editable="false" layoutX="10.0" layoutY="137.0" prefHeight="28.0" prefWidth="125.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0">
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </TextField>
+                                          <Separator layoutX="10.0" layoutY="37.0" opacity="0.5" prefWidth="200.0" style="-fx-background-color: #999;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </top>
+                              </BorderPane>
+                           </top>
+                           <center>
+                              <AnchorPane prefHeight="239.0" prefWidth="856.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </BorderPane.margin>
+                                 <children>
+                                    <TableView fx:id="tblNewCondemn" layoutX="328.0" layoutY="14.0" prefHeight="157.0" prefWidth="846.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                      <columns>
+                                        <TableColumn fx:id="colCategory" prefWidth="187.0" text="Category" />
+                                        <TableColumn fx:id="colInventoryNo" prefWidth="232.0" text="Inventory No" />
+                                          <TableColumn fx:id="colDescription" prefWidth="240.0" text="Description" />
+                                          <TableColumn fx:id="colCondemnQty" prefWidth="178.0" text="Condemn QTY" />
+                                      </columns>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" onAction="#removeFromListOnAction" text="Remove From List">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="DELETE" />
+                                                   </graphic></MenuItem>
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <JFXButton id="btnAdd" fx:id="btnConfirmCondemn" buttonType="RAISED" layoutX="654.0" layoutY="201.0" onAction="#confirmCondemnOnAction" prefHeight="40.0" prefWidth="192.0" style="-fx-background-color: #e67e22; -fx-background-radius: 10;" text="Confirm Condemn" textFill="WHITE" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="201.0">
+                                       <graphic>
+                                          <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="CHECKBOX_MARKED_CIRCLE" size="20" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="btnClear" fx:id="btnClearTable" alignment="CENTER" buttonType="RAISED" layoutX="14.0" layoutY="201.0" onAction="#clearTableOnAction" prefHeight="40.0" prefWidth="192.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 10;" text="Clear Table" textFill="WHITE" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="10.0">
+                                       <graphic>
+                                          <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="BACKSPACE" size="20" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="btnAdd" fx:id="btnImport" buttonType="RAISED" layoutX="446.0" layoutY="201.0" onAction="#importListOnAction" prefHeight="40.0" prefWidth="192.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;" text="Import Order List" textFill="WHITE" AnchorPane.rightAnchor="220.0">
+                                       <graphic>
+                                          <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="IMPORT" size="19" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                        </BorderPane>
+                     </top>
+                     <left>
+                        <AnchorPane prefHeight="347.0" prefWidth="200.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </BorderPane.margin>
+                           <children>
+                              <Label layoutX="15.0" layoutY="10.0" text="FILTER CONDEMNATIONS" textFill="#4a4848" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <ComboBox fx:id="cmbWard" layoutX="10.0" layoutY="88.0" prefHeight="28.0" prefWidth="172.0" promptText="Filter By Ward" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <Label layoutX="10.0" layoutY="61.0" text="Ward :" AnchorPane.leftAnchor="10.0" />
+                              <ComboBox fx:id="cmbDescription2" layoutX="10.0" layoutY="160.0" prefHeight="28.0" prefWidth="173.0" promptText="Filter By Inventory" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <Label layoutX="10.0" layoutY="133.0" text="Inventory :" AnchorPane.leftAnchor="10.0" />
+                              <Label layoutX="10.0" layoutY="206.0" text="Condemed Date :" AnchorPane.leftAnchor="10.0" />
+                              <JFXDatePicker fx:id="datePicker" defaultColor="#2c3e50" layoutX="10.0" layoutY="223.0" prefHeight="26.0" prefWidth="186.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="4.0" />
+                              <JFXButton id="btnClear" alignment="CENTER" buttonType="RAISED" layoutX="61.0" layoutY="274.0" onAction="#clearFiltersOnAction" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 5;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+                                 <graphic>
+                                    <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="FILTER_REMOVE" size="20" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton id="btnApply" alignment="CENTER" buttonType="RAISED" layoutX="107.0" layoutY="274.0" onAction="#applyFiltersOnAction" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 5;" text="Apply" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                 <graphic>
+                                    <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="FILTER" size="20" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="425.0" prefWidth="656.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" right="5.0" top="5.0" />
+                           </BorderPane.margin>
+                           <children>
+                              <TableView fx:id="tbWardCondemnDetails" layoutX="193.0" layoutY="77.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columns>
+                                    <TableColumn fx:id="colCondemnId" prefWidth="122.0" text="Condemn ID" />
+                                    <TableColumn fx:id="colWardNo" prefWidth="122.0" text="Ward No" />
+                                  <TableColumn fx:id="colInvNo" prefWidth="122.0" text="Inventory No" />
+                                  <TableColumn fx:id="colDescript" prefWidth="210.0" text="Description" />
+                                    <TableColumn fx:id="colQtyCondemned" prefWidth="143.0" text="QTY Condemned" />
+                                    <TableColumn fx:id="colCondemnDate" prefWidth="164.0" text="Condemn Date" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </content>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ScrollPane>
+   </children>
+</AnchorPane>

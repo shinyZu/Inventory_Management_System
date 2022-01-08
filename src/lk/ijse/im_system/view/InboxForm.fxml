@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="361.0" prefWidth="600.0" stylesheets="@assets/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.im_system.controller.InboxFormController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="47.0" prefHeight="302.0" prefWidth="580.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;">
+         <children>
+            <ListView fx:id="inboxListView" layoutX="160.0" layoutY="59.0" prefHeight="231.0" prefWidth="410.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="10.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#openMailOnAction" text="Open Mail">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="EMAIL_OPEN" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#markAsReadOnAction" text="Mark As Read">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="READ" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </ListView>
+            <ListView fx:id="msgTypeListView" layoutX="14.0" layoutY="23.0" prefHeight="267.0" prefWidth="141.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="10.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ListView>
+            <Label layoutX="160.0" layoutY="23.0" prefHeight="29.0" prefWidth="410.0" style="-fx-background-color: #8395a7; -fx-background-radius: 5;" text="Unread Mails" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="10.0">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView glyphName="REFRESH" layoutX="550.0" layoutY="44.0" onMouseClicked="#refreshInboxOnClick" pickOnBounds="true" size="18" AnchorPane.rightAnchor="12.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="29.0" prefWidth="57.0" text="INBOX" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="71.0" layoutY="29.0" prefHeight="2.0" prefWidth="348.0" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="181.0" />
+      <Label fx:id="lblStoreWardMail" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="21.0" prefHeight="16.0" prefWidth="169.0" text="invms1141@gmail.com" AnchorPane.rightAnchor="10.0" />
+   </children>
+</AnchorPane>

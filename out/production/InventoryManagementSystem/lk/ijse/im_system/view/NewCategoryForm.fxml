@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextNewCategory" prefHeight="354.0" prefWidth="319.0" stylesheets="@assets/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.im_system.controller.NewCategoryFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="41.0" prefHeight="304.0" prefWidth="304.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 10;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <TextField fx:id="txtCategoryId" disable="true" editable="false" layoutX="19.0" layoutY="75.0" prefHeight="28.0" prefWidth="259.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" />
+            <Label layoutX="19.0" layoutY="44.0" prefHeight="31.0" prefWidth="150.0" text="Category ID :" textFill="#757575" />
+            <TextField fx:id="txtCategoryTitle" layoutX="21.0" layoutY="158.0" prefHeight="28.0" prefWidth="259.0" style="-fx-background-color: transparent; -fx-border-color: #636e72; -fx-border-radius: 3;" />
+            <Label layoutX="22.0" layoutY="127.0" prefHeight="31.0" prefWidth="150.0" text="Category Title :" />
+            <JFXButton id="btnAdd" buttonType="RAISED" layoutX="173.0" layoutY="243.0" onAction="#saveCategoryOnAction" prefHeight="40.0" prefWidth="108.0" style="-fx-background-color: #e67e22; -fx-background-radius: 10;" text="Save" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="CHECKBOX_MARKED_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton id="btnAdd" fx:id="btnCancel" buttonType="RAISED" layoutX="23.0" layoutY="243.0" onAction="#cancelOnAction" prefHeight="40.0" prefWidth="108.0" style="-fx-background-color: #999; -fx-background-radius: 10;" text="Cancel" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView id="btnIcon" fill="WHITE" glyphName="CLOSE_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label layoutX="9.0" layoutY="10.0" prefHeight="29.0" prefWidth="117.0" text="New Category">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Separator layoutX="124.0" layoutY="22.0" prefHeight="6.0" prefWidth="182.0" />
+   </children>
+</AnchorPane>
